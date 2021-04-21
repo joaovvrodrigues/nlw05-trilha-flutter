@@ -15,6 +15,7 @@ flutter run
 
 🔥 Aplicativo desenvolvido durante a semana **Next Level Week#5** da [Rocketseat](https://www.rocketseat.com.br). 🔥
 
+
 ## Figma:
 
-[Figma Projecy](https://www.figma.com/file/fMqKhwT9L5D3MVe4btRtG5/DevQuiz?node-id=0%3A1)
+[Figma Project](https://www.figma.com/file/fMqKhwT9L5D3MVe4btRtG5/DevQuiz?node-id=0%3A1)

@@ -1,8 +1,20 @@
-import 'package:devquiz/core/core.dart';
-import 'package:devquiz/shared/widgets/progress_indicator/progress_indicator_widget.dart';
 import 'package:flutter/material.dart';
 
+import 'package:devquiz/core/core.dart';
+import 'package:devquiz/shared/widgets/progress_indicator/progress_indicator_widget.dart';
+
 class QuizCardWidget extends StatelessWidget {
+  final String title;
+  final String image;
+  final int questionAnswered;
+  final int total;
+  const QuizCardWidget(
+      {Key? key,
+      required this.title,
+      required this.image,
+      required this.questionAnswered,
+      required this.total})
+      : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -23,15 +35,18 @@ class QuizCardWidget extends StatelessWidget {
             child: Image.asset(AppImages.blocks),
           ),
           SizedBox(height: 24),
-          Text('Gerenciamento de Estado', style: AppTextStyles.heading15),
+          Text(title, style: AppTextStyles.heading15),
           SizedBox(height: 24),
           Row(
             children: [
               Expanded(
                 flex: 2,
-                child: Text('3 de 10', style: AppTextStyles.body11),
+                child:
+                    Text('$questionAnswered de $total', style: AppTextStyles.body11),
               ),
-              Expanded(flex: 3, child: ProgressIndicatorWidget(value: 0.3)),
+              Expanded(
+                  flex: 3,
+                  child: ProgressIndicatorWidget(value: questionAnswered / total)),
             ],
           )
         ],

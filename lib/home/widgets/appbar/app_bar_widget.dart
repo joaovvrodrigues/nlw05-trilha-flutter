@@ -1,9 +1,11 @@
 import 'package:devquiz/core/core.dart';
 import 'package:devquiz/home/widgets/score_card/score_card_widget.dart';
+import 'package:devquiz/shared/models/user_model.dart';
 import 'package:flutter/material.dart';
 
 class AppBarWidget extends PreferredSize {
-  AppBarWidget()
+  final UserModel user;
+  AppBarWidget({required this.user})
       : super(
           preferredSize: Size.fromHeight(250),
           child: Container(
@@ -26,7 +28,7 @@ class AppBarWidget extends PreferredSize {
                             style: AppTextStyles.title,
                             children: [
                               TextSpan(
-                                text: 'Emicida',
+                                text: user.name,
                                 style: AppTextStyles.titleBold,
                               ),
                             ]),
@@ -35,18 +37,16 @@ class AppBarWidget extends PreferredSize {
                         width: 48,
                         height: 48,
                         decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          image: DecorationImage(
-                              image: NetworkImage(
-                                  'https://yt3.ggpht.com/ytc/AAUvwniYRFlqcpN8Q3r0Oc0BaNzJsqmY0Lt01ucferpVmA=s900-c-k-c0x00ffffff-no-rj')),
-                        ),
+                            borderRadius: BorderRadius.circular(10),
+                            image: DecorationImage(
+                                image: NetworkImage(user.photoUrl))),
                       ),
                     ],
                   ),
                 ),
                 Align(
                   alignment: Alignment(0, 1),
-                  child: ScoreCardWidget(),
+                  child: ScoreCardWidget(score: user.score),
                 )
               ],
             ),

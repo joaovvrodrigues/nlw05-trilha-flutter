@@ -13,22 +13,12 @@ class QuestionIndicatorWidget extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(
-                  'Questão 04',
-                  style: AppTextStyles.body,
-                ),
-                Text(
-                  'de 10',
-                  style: AppTextStyles.body,
-                ),
+                Text('Questão 04', style: AppTextStyles.body),
+                Text('de 10', style: AppTextStyles.body),
               ],
             ),
-            SizedBox(
-              height: 16,
-            ),
-            ProgressIndicatorWidget(
-              value: 0.7,
-            )
+            SizedBox(height: 16),
+            ProgressIndicatorWidget(value: 0.7)
           ],
         ),
       ),

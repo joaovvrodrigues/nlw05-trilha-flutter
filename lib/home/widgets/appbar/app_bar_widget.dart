@@ -11,7 +11,7 @@ class AppBarWidget extends PreferredSize {
             child: Stack(
               children: [
                 Container(
-                  height: 161,
+                  height: 163,
                   padding: const EdgeInsets.symmetric(horizontal: 20),
                   width: double.maxFinite,
                   decoration: BoxDecoration(
@@ -26,19 +26,19 @@ class AppBarWidget extends PreferredSize {
                             style: AppTextStyles.title,
                             children: [
                               TextSpan(
-                                text: 'Tiago',
+                                text: 'Emicida',
                                 style: AppTextStyles.titleBold,
                               ),
                             ]),
                       ),
                       Container(
-                        width: 58,
-                        height: 58,
+                        width: 48,
+                        height: 48,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
                           image: DecorationImage(
                             image: NetworkImage(
-                                'https://styles.redditmedia.com/t5_2b7d7n/styles/profileIcon_ljxy8mzxup361.jpg?width=256&height=256&crop=256:256,smart&s=6de4c1faa82a65b582938e9c7264b88ba45542db'),
+                                'https://yt3.ggpht.com/ytc/AAUvwniYRFlqcpN8Q3r0Oc0BaNzJsqmY0Lt01ucferpVmA=s900-c-k-c0x00ffffff-no-rj'),
                           ),
                         ),
                       ),

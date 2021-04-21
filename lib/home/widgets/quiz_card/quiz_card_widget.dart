@@ -6,61 +6,35 @@ class QuizCardWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      padding: EdgeInsets.all(16),
       decoration: BoxDecoration(
         color: AppColors.white,
         border: Border.fromBorderSide(
-          BorderSide(
-            color: AppColors.border,
-          ),
+          BorderSide(color: AppColors.border),
         ),
-        borderRadius: BorderRadius.circular(
-          10,
-        ),
+        borderRadius: BorderRadius.circular(10),
       ),
-      child: Padding(
-        padding: const EdgeInsets.only(
-          bottom: 10,
-          left: 20,
-          right: 20,
-          top: 20,
-        ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Container(
-              height: 40,
-              width: 40,
-              child: Image.asset(AppImages.blocks),
-            ),
-            SizedBox(
-              height: 20,
-            ),
-            Text(
-              'Gerenciamento de Estado',
-              style: AppTextStyles.heading15,
-            ),
-            SizedBox(
-              height: 20,
-            ),
-            Row(
-              children: [
-                Expanded(
-                  flex: 1,
-                  child: Text(
-                    '3/10',
-                    style: AppTextStyles.body11,
-                  ),
-                ),
-                Expanded(
-                  flex: 3,
-                  child: ProgressIndicatorWidget(
-                    value: 0.3,
-                  ),
-                ),
-              ],
-            )
-          ],
-        ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Container(
+            height: 40,
+            width: 40,
+            child: Image.asset(AppImages.blocks),
+          ),
+          SizedBox(height: 24),
+          Text('Gerenciamento de Estado', style: AppTextStyles.heading15),
+          SizedBox(height: 24),
+          Row(
+            children: [
+              Expanded(
+                flex: 2,
+                child: Text('3 de 10', style: AppTextStyles.body11),
+              ),
+              Expanded(flex: 3, child: ProgressIndicatorWidget(value: 0.3)),
+            ],
+          )
+        ],
       ),
     );
   }

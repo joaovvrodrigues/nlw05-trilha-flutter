@@ -17,7 +17,8 @@ flutter run
 
 
 ## Figma:
-<h1 align='center'>
-[Figma Project](https://www.figma.com/file/fMqKhwT9L5D3MVe4btRtG5/DevQuiz?node-id=0%3A1)
 
-<img width="500" src="figma_capa.png" alt="Logo" /></h1> 
+<p align="center">
+<a href="https://www.figma.com/file/fMqKhwT9L5D3MVe4btRtG5/DevQuiz?node-id=0%3A1">Figma Project </a> 
+</p> 
+<h1 align='center'><img width="500" src="figma_capa.png" alt="Logo" /></h1> 

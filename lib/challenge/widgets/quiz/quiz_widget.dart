@@ -15,7 +15,7 @@ class QuizWidget extends StatelessWidget {
           Text(title, style: AppTextStyles.heading),
           SizedBox(height: 24),
           AnswerWidget(
-              isRight: false,
+              isRight: true,
               isSelected: true,
               title:
                   'Possibilita a criação de aplicativos compilados nativamente'),

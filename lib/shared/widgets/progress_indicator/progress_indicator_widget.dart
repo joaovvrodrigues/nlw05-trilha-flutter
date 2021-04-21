@@ -11,9 +11,7 @@ class ProgressIndicatorWidget extends StatelessWidget {
     return Container(
       child: LinearProgressIndicator(
         value: value,
-        valueColor: AlwaysStoppedAnimation<Color>(
-          AppColors.chartPrimary,
-        ),
+        valueColor: AlwaysStoppedAnimation<Color>(AppColors.chartPrimary),
         backgroundColor: AppColors.chartSecondary,
       ),
     );

@@ -37,9 +37,8 @@ class AppBarWidget extends PreferredSize {
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
                           image: DecorationImage(
-                            image: NetworkImage(
-                                'https://yt3.ggpht.com/ytc/AAUvwniYRFlqcpN8Q3r0Oc0BaNzJsqmY0Lt01ucferpVmA=s900-c-k-c0x00ffffff-no-rj'),
-                          ),
+                              image: NetworkImage(
+                                  'https://yt3.ggpht.com/ytc/AAUvwniYRFlqcpN8Q3r0Oc0BaNzJsqmY0Lt01ucferpVmA=s900-c-k-c0x00ffffff-no-rj')),
                         ),
                       ),
                     ],

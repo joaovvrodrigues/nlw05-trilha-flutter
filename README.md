@@ -1,4 +1,4 @@
-<h1 align='center'>![](assets/images/trophy.png) </h1> 
+<h1 align='center'><img width="300" src="assets/images/trophy.png" alt="Logo" /></h1> 
 
 ## Descrição do projeto:
 

@@ -4,9 +4,6 @@ import 'package:devquiz/shared/models/quiz_model.dart';
 import 'package:devquiz/shared/models/user_model.dart';
 import 'package:flutter/foundation.dart';
 
-String photoEmicida =
-    'https://yt3.ggpht.com/ytc/AAUvwniYRFlqcpN8Q3r0Oc0BaNzJsqmY0Lt01ucferpVmA=s900-c-k-c0x00ffffff-no-rj';
-
 class HomeController {
   // Classes que precisam ser gerenciadas por esse controller:
   // USER

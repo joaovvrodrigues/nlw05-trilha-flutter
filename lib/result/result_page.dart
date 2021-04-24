@@ -74,10 +74,11 @@ class ResultPage extends StatelessWidget {
                       child: ButtonNextWidget.whiteNoBorder(
                           label: 'Voltar ao início',
                           onTap: () {
-                            Navigator.pushReplacement(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => HomePage()));
+                            Navigator.of(context).pushAndRemoveUntil(
+                              MaterialPageRoute(
+                                  builder: (context) => HomePage()),
+                              ModalRoute.withName('/'),
+                            );
                           }),
                     ),
                   ),

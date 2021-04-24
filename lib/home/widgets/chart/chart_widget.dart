@@ -29,6 +29,12 @@ class _ChartWidgetState extends State<ChartWidget>
   }
 
   @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Container(
       height: 80,

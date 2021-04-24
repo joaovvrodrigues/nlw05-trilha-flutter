@@ -29,6 +29,14 @@ class ButtonNextWidget extends StatelessWidget {
         onTap = onTap,
         label = label;
 
+  ButtonNextWidget.purple({required String label, required VoidCallback onTap})
+      : backgroundColor = AppColors.purple,
+        fontColor = AppColors.white,
+        borderColor = AppColors.lightPurple,
+        overlayColor = AppColors.darkPurple,
+        onTap = onTap,
+        label = label;
+
   ButtonNextWidget.disabled({required String label})
       : backgroundColor = AppColors.lightGrey,
         fontColor = AppColors.white,
@@ -41,6 +49,14 @@ class ButtonNextWidget extends StatelessWidget {
       : backgroundColor = AppColors.white,
         fontColor = AppColors.grey,
         borderColor = AppColors.border,
+        overlayColor = AppColors.border,
+        onTap = onTap,
+        label = label;
+
+   ButtonNextWidget.whiteNoBorder({required String label, required VoidCallback onTap})
+      : backgroundColor = AppColors.white,
+        fontColor = AppColors.grey,
+        borderColor = AppColors.white,
         overlayColor = AppColors.border,
         onTap = onTap,
         label = label;

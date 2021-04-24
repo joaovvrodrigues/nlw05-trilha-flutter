@@ -1,14 +1,18 @@
 import 'package:devquiz/challenge/challenge_controller.dart';
-import 'package:devquiz/challenge/widgets/button_next/button_next_widget.dart';
 import 'package:devquiz/challenge/widgets/question_indicator/question_indicator_widget.dart';
 import 'package:devquiz/challenge/widgets/quiz/quiz_widget.dart';
+import 'package:devquiz/result/result_page.dart';
 import 'package:devquiz/shared/models/question_model.dart';
+import 'package:devquiz/shared/widgets/button_next/button_next_widget.dart';
 import 'package:flutter/material.dart';
 
 class ChallengePage extends StatefulWidget {
   final List<QuestionModel> questions;
+  final String titleQuiz;
 
-  const ChallengePage({Key? key, required this.questions}) : super(key: key);
+  const ChallengePage(
+      {Key? key, required this.questions, required this.titleQuiz})
+      : super(key: key);
   @override
   _ChallengePageState createState() => _ChallengePageState();
 }
@@ -30,6 +34,13 @@ class _ChallengePageState extends State<ChallengePage> {
       pageController.nextPage(
           duration: Duration(milliseconds: 400), curve: Curves.decelerate);
     }
+  }
+
+  void onSelected(bool value) {
+    if (value) {
+      controller.qtdAnswerRight++;
+    }
+    nextPage();
   }
 
   @override
@@ -63,7 +74,7 @@ class _ChallengePageState extends State<ChallengePage> {
         children: widget.questions
             .map((e) => QuizWidget(
                   question: e,
-                  onChange: nextPage,
+                  onSelected: onSelected,
                 ))
             .toList(),
       ),
@@ -89,7 +100,14 @@ class _ChallengePageState extends State<ChallengePage> {
                         child: ButtonNextWidget.green(
                             label: 'Confirmar',
                             onTap: () {
-                              Navigator.pop(context);
+                              Navigator.pushReplacement(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => ResultPage(
+                                          result: controller.qtdAnswerRight,
+                                            length: widget.questions.length,
+                                            titleQuiz: widget.titleQuiz,
+                                          )));
                             }))
                   // value != widget.questions.length
                   //     ? Expanded(

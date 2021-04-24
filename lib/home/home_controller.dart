@@ -20,16 +20,9 @@ class HomeController {
 
   final repository = HomeRepository();
 
-  Future<void> getUser() async {
+  Future<void> fetchData() async {
     state = HomeState.loading;
-    //await Future.delayed(Duration(seconds: 2));
     user = await repository.getUser();
-    state = HomeState.success;
-  }
-
-  Future<void> getQuizzes() async {
-    state = HomeState.loading;
-    //await Future.delayed(Duration(seconds: 2));
     quizzes = await repository.getQuizzes();
     state = HomeState.success;
   }
